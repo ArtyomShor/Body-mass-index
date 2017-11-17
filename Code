@@ -1,0 +1,33 @@
+/*
+Программа расссчёта индекса массы тела
+Body mass index
+ */
+package indexmass;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Артём
+ */
+public class IndexMass {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+String data;
+data=JOptionPane.showInputDialog("Введите свой рост в метрах \n Enter your height in meters");
+//"enter your height in meters"
+double height=Double.parseDouble(data);
+data=JOptionPane.showInputDialog("Введите свой вес \n Enter your weight");
+//Enter your weight
+double mass=Double.parseDouble(data);
+double bmi=mass/height/height;
+bmi=Math.round(bmi*100)/100.0;   //Округление полученного значения
+//Rounding the Received Value
+JOptionPane.showMessageDialog(null,"Индекс массы тела \n Body mass index \n"+bmi);
+JOptionPane.showMessageDialog(null,"Норма \n Norm \n 18.5<Index<25 ");        
+        
+    }
+    
+}
